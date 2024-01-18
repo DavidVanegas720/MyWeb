@@ -11,10 +11,29 @@
 /* ------header---------- */
 .header--tittle{
     border: 2px solid black;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: var(--primary-color);
-    color: var(--color-Text)
+    color: var(--color-Text);
+    font-family: 'Roboto', sans-serif;
+}
+
+.header--presentation {
+    border: 2px solid white;
+    width: 700px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header--presentation h3 {
+    font-size: 1.6rem;
+}
+
+.header--presentation img {
+    width: 400px;
 }
 
 
