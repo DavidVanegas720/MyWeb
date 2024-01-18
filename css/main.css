@@ -41,6 +41,25 @@ body {
     width: 400px;
 }
 
+.header--presentation button {
+    padding: 10px 20px;
+    margin-top: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    color: var(--color-Text);
+    font-weight: bold;
+}
+
+.header--presentation button:hover{
+    background-color: var(--color-Text);
+    color: var(--color-text2);
+    transition: .1s ease-in;
+}
+
 
 /* ------main content---------------- */
 
