@@ -1,25 +1,25 @@
-
+body {
+    font-family: 'Roboto', sans-serif;
+}
 /* ---variablesDeclaration------- */
 :root {
     --primary-color: #222;
     --secondary-color: #1e1e1e;
     --color-Text: #c96d5b;
-    --color-text2: #686868;
+    --color-text2: #fff;
 }
 
 
 /* ------header---------- */
 .header--tittle{
-    border: 2px solid black;
     width: 100vw;
     height: 100vh;
     background: var(--primary-color);
     color: var(--color-Text);
-    font-family: 'Roboto', sans-serif;
+    
 }
 
 .header--presentation {
-    border: 2px solid white;
     width: 700px;
     height: 100vh;
     margin: 0 auto;
@@ -32,6 +32,10 @@
     font-size: 1.6rem;
 }
 
+.header--presentation h1, h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .header--presentation img {
     width: 400px;
 }
@@ -40,7 +44,6 @@
 /* ------main content---------------- */
 
 .main--content{
-    border: 2px solid blue;
     width: 100vw;
     height: 100%;
     background-color: var(--secondary-color);
@@ -48,7 +51,6 @@
 
 /* ----------aboutMe---------------------- */
 .main--content-aboutMe{
-    border: 2px solid orange;
     width: 650px;
     height: 100vh;
     margin: 0 auto;
@@ -71,6 +73,7 @@
 
 .main--content-aboutMe p {
     color: var(--color-text2);
+    text-shadow: 1px 1px 2px #333;
 }
 
 
@@ -78,7 +81,6 @@
 /* ------------proyects------------------- */
 
 .main--content-proyects{
-    border: 2px solid red;
     width: 100vw;
     height: 100vh;
 }
