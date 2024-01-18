@@ -1,4 +1,11 @@
 
+/* ---variablesDeclaration------- */
+:root {
+    --primary-color: #222;
+    --secondary-color: #1e1e1e;
+    --color-Text: #c96d5b;
+    --color-text2: #686868;
+}
 
 
 /* ------header---------- */
@@ -6,7 +13,8 @@
     border: 2px solid black;
     width: 100%;
     height: 100vh;
-    background: gray;
+    background: var(--primary-color);
+    color: var(--color-Text)
 }
 
 
@@ -16,22 +24,35 @@
     border: 2px solid blue;
     width: 100vw;
     height: 100%;
+    background-color: var(--secondary-color);
 }
 
 /* ----------aboutMe---------------------- */
 .main--content-aboutMe{
     border: 2px solid orange;
-    width: 600px;
+    width: 650px;
     height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    position: relative;
+    font-size: 1.5rem;
+    /* background-color: var(--secondary-color); */
 }
 
+.main--content-aboutMe h2 {
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    left: 190px;
+    color: var(--color-Text);
+}
 
-
+.main--content-aboutMe p {
+    color: var(--color-text2);
+}
 
 
 
