@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 /* ---variablesDeclaration------- */
 :root {
@@ -74,6 +75,13 @@ body {
 .main--content-aboutMe p {
     color: var(--color-text2);
     text-shadow: 1px 1px 2px #333;
+}
+
+.main--content-aboutMe img{
+    width: 100px;
+    position: relative;
+    bottom: -60px;
+    left: 250px;
 }
 
 
