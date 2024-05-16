@@ -165,9 +165,35 @@ body {
   .overlay-text.show {
     opacity: 1;}
 
+
+
 /* ------------footer----------- */
 .footer--content{
-    border: 1px solid black;
+    background-color: var(--secondary-color);
+    color: var(--color-Text);
     width: 100%;
-    height: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer--content-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+    background-color: var(--color-Text);
+    border: none;
+    border-radius: 4px;
+    color: var(--color-text2);
+    font-weight: bold;
+}
+
+.footer--content-social{
+    display: flex;
+}
+
+.footer--content-social .footer--social-container-icon{
+    width: 30px;
 }
