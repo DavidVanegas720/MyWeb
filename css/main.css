@@ -184,6 +184,12 @@ body {
     font-weight: bold;
     margin-bottom: 20px;
 }
+.footer--content-button  button:hover {
+    color: var(--color-Text);
+    background-color: var(--primary-color);
+    transition: ease-in 0.2s;
+    
+}
 
 .footer--content-social {
     display: flex;
@@ -198,6 +204,7 @@ body {
 .footer--social-container-icon a img {
     filter: invert(63%) sepia(31%) saturate(5313%) hue-rotate(327deg) brightness(92%) contrast(69%);
 }
+
 
 /* Media Queries */
 @media (max-width: 768px) {
