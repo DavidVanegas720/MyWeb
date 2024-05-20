@@ -1,7 +1,9 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
+
 /* ---variablesDeclaration------- */
 :root {
     --primary-color: #222;
@@ -10,14 +12,12 @@ body {
     --color-text2: #fff;
 }
 
-
 /* ------header---------- */
-.header--tittle{
+.header--tittle {
     width: 100vw;
     height: 100vh;
     background: var(--primary-color);
     color: var(--color-Text);
-    
 }
 
 .header--presentation {
@@ -28,7 +28,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
+
 .header--presentation h3 {
     font-size: 1.6rem;
 }
@@ -39,6 +41,7 @@ body {
 
 .header--presentation img {
     width: 400px;
+    max-width: 100%;
 }
 
 .header--presentation button {
@@ -54,25 +57,26 @@ body {
     font-weight: bold;
 }
 
-.header--presentation button:hover{
+.header--presentation button:hover {
     background-color: var(--color-Text);
     color: var(--color-text2);
     transition: .1s ease-in;
 }
 
-
 /* ------main content---------------- */
-
-.main--content{
-    width: 100vw;
+.main--content {
+    width: 100%;
     height: 100%;
     background-color: var(--secondary-color);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* ----------aboutMe---------------------- */
-.main--content-aboutMe{
-    width: 650px;
-    height: 100vh;
+.main--content-aboutMe {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -80,62 +84,53 @@ body {
     justify-content: center;
     position: relative;
     font-size: 1.5rem;
-    /* background-color: var(--secondary-color); */
 }
 
 .main--content-aboutMe h2 {
-    font-size: 50px;
-    position: absolute;
-    top: 10px;
-    left: 190px;
+    font-size: 2rem;
     color: var(--color-Text);
+    margin-bottom: 20px;
 }
 
 .main--content-aboutMe p {
     color: var(--color-text2);
     text-shadow: 1px 1px 2px #333;
+    margin-bottom: 20px;
 }
 
-.main--content-aboutMe img{
+.main--content-aboutMe img {
     width: 100px;
-    position: relative;
-    bottom: -60px;
-    left: 250px;
+    margin: 0 auto;
 }
-
-
 
 /* ------------proyects------------------- */
-
-.main--content-proyects{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+.main--content-proyects {
+    width: auto;
+    padding: 20px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 50px;
     background-color: var(--primary-color);
 }
-.main--content-proyects h2{
+
+.main--content-proyects h2 {
     color: var(--color-Text);
-    font-size: 40px;
+    font-size: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
-.content-proyects-links{
+.content-proyects-links {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
     position: relative;
-    width: 300px;
-    height: 200px;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
-    border: 5px;
 }
+
 .content-proyects-links a img {
     width: 100%;
-    height: 100%;
-    background-size: cover;
+    height: auto;
     display: block;
 }
 
@@ -154,30 +149,29 @@ body {
     font-size: 20px;
     font-weight: bold;
     z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0,0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
     opacity: 0; 
     transition: opacity 0.3s ease; 
-    
-    
-  }
-  .overlay-text.show {
-    opacity: 1;}
+}
 
-
+.overlay-text.show {
+    opacity: 1;
+}
 
 /* ------------footer----------- */
-.footer--content{
+.footer--content {
     background-color: var(--secondary-color);
     color: var(--color-Text);
-    width: 100%;
-    height: 50px;
+    width: auto;
+    padding: 20px;
     display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
+
 .footer--content-button button {
     padding: 10px 20px;
     font-size: 16px;
@@ -188,12 +182,96 @@ body {
     border-radius: 4px;
     color: var(--color-text2);
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.footer--content-social{
+.footer--content-social {
     display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-.footer--content-social .footer--social-container-icon{
+.footer--social-container-icon {
     width: 30px;
 }
+
+.footer--social-container-icon a img {
+    filter: invert(63%) sepia(31%) saturate(5313%) hue-rotate(327deg) brightness(92%) contrast(69%);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header--presentation {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .header--presentation h1 {
+        font-size: 1.5rem;
+    }
+
+    .header--presentation h3 {
+        font-size: 1.2rem;
+    }
+
+    .header--presentation img {
+        width: 80%;
+    }
+
+    .main--content-aboutMe {
+        padding: 20px;
+    }
+
+    .main--content-aboutMe h2 {
+        font-size: 1.8rem;
+    }
+
+    .main--content-proyects {
+        padding: 20px;
+    }
+
+    .main--content-proyects h2 {
+        font-size: 1.8rem;
+    }
+
+    .content-proyects-links {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer--content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header--presentation h1 {
+        font-size: 1.2rem;
+    }
+
+    .header--presentation h3 {
+        font-size: 1rem;
+    }
+
+    .header--presentation button {
+        font-size: 14px;
+    }
+
+    .main--content-aboutMe h2 {
+        font-size: 1.5rem;
+    }
+
+    .main--content-proyects h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer--content-button button {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
