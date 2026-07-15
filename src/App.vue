@@ -1,4 +1,5 @@
 <script setup>
+import ParticlesBackground from './components/ParticlesBackground.vue'
 import TheNavbar from './components/TheNavbar.vue'
 import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
@@ -9,6 +10,7 @@ import SiteFooter from './components/SiteFooter.vue'
 </script>
 
 <template>
+    <ParticlesBackground />
    <TheNavbar />
 
   <main>
