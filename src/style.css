@@ -1,0 +1,55 @@
+/* Reset basico */
+* {
+  box-sizing: border-box;
+}
+
+/* Scroll suave y offset para el navbar fijo */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+/* Tema claro (por defecto) */
+:root {
+  --color-backdrop: #e6e6e9;
+  --color-bg: #f4f4f5;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-text-muted: #5b6470;
+  --color-accent: #c96d5b;
+  --color-accent-contrast: #ffffff;
+  --color-border: #e4e4e7;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --transition: 0.25s ease;
+}
+
+/* Tema oscuro: solo redefine las variables */
+[data-theme='dark'] {
+  --color-backdrop: #0e0e10;
+  --color-bg: #1a1a1a;
+  --color-surface: #222222;
+  --color-text: #f5f5f5;
+  --color-text-muted: #b3b3b3;
+    --color-accent: #b85c4a;
+  --color-accent-contrast: #1a1a1a;
+  --color-border: #333333;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  background: var(--color-backdrop);
+  color: var(--color-text);
+  transition: background var(--transition), color var(--transition);
+}
+
+/* Lamina central: contiene el contenido y lo resalta sobre el fondo */
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--color-bg);
+  border-inline: 1px solid var(--color-border);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+}
