@@ -28,7 +28,7 @@
 .about {
     max-width: 760px;
     margin: 0 auto;
-    padding: 80px 24px;
+    padding: 48px 24px 80px;
     text-align: center;
 }
 

@@ -1,7 +1,11 @@
 
 <template>
   <footer class="footer" id="contacto">
-    <a class="footer__cv" :href="cvUrl" download>Descargar CV</a>
+    <div class="footer__cv-group">
+  <a class="footer__cv" :href="cvEs" download>Descargar CV (Español)</a>
+  <a class="footer__cv footer__cv--alt" :href="cvEn" download>Download CV (English)</a>
+</div>
+
 
     <nav class="footer__social">
       <a :href="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -34,7 +38,8 @@ const linkedin = 'https://www.linkedin.com/in/davidvanegas25/'
 const github = 'https://github.com/DavidVanegas720'
 
 // La ruta del CV vive en /public. BASE_URL aplica el base '/MyWeb/' en produccion.
-const cvUrl = `${import.meta.env.BASE_URL}CV_Jose_David_Yepez_Vanegas.pdf`
+const cvEs = `${import.meta.env.BASE_URL}CV_Jose_David_Yepez_ES.pdf`;
+const cvEn = `${import.meta.env.BASE_URL}CV_Jose_David_Yepez_EN.pdf`;
 
 // Anio dinamico para el copyright
 const year = new Date().getFullYear()
@@ -68,6 +73,24 @@ const year = new Date().getFullYear()
   transform: translateY(-2px);
   opacity: 0.92;
 }
+.footer__cv-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Variante secundaria: contorno coral en vez de relleno */
+.footer__cv--alt {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+.footer__cv--alt:hover {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+
 .footer__social {
   display: flex;
   justify-content: center;

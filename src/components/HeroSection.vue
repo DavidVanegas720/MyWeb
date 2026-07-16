@@ -24,12 +24,11 @@ const email = 'jdavidvanegas25@gmail.com'
 .hero {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 24px 80px;
+  padding: 24px 24px 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 48px;
-  min-height: 80vh;
 }
 .hero__content {
   flex: 1;
